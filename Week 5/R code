@@ -1,0 +1,14 @@
+mtcars<-mtcars
+mtcars$mpg_2<-ifelse(mtcars$mpg< 16,"Low",ifelse(mtcars$mpg<21,"Low_intermediate",ifelse(mtcars$mpg<26,"Intermediate_high","High")))
+head(mtcars,n=5)
+boxplot(mtcars$mpg~mtcars$mpg_2)
+abline(h=c(16,21,26),lty=2)
+def_color<-ifelse(mtcars$mpg< 16,"red",ifelse(mtcars$mpg<21,"blue",ifelse(mtcars$mpg<26,"green","gray")))
+plot(x=mtcars$mpg, col=def_color,pch=16)
+abline(h=c(16,21,26),lty=2)
+quakes<-quakes
+quakes$depth_2<-ifelse(quakes$depth< 150,1,ifelse(quakes$depth<500,2,3))
+head(quakes,n=5)
+quakes$mag_2<-ifelse(quakes$mag< 4.5,"green",ifelse(quakes$mag<5.0,"blue","red"))
+head(quakes,n=5)
+plot(x=quakes$long,y=quakes$lat,col=quakes$mag_2,cex=quakes$depth_2,pch=16)
