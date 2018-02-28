@@ -1,0 +1,30 @@
+a<-c(1:10)
+is.integer(a)
+a[a < 3]
+a[a == 5]
+a[a !=7]
+a[which(a%%2!= 0)]
+b<-c(1.1,-2.2,3.3,-4.4,5.5)
+abs(b)^2
+sqrt(abs(b))
+log(abs(b))
+exp(abs(b))
+v <- rnorm(n=10, mean=0, sd=1)
+mean(v)
+var(v)
+sd(v)
+range(v)
+v1<- seq(from=1, to=10, by=1 )
+v2<- seq(from=-4, to=6, by=0.5)
+v3<- seq(from=4, to=8,length.out = 9)
+v1
+v2
+v3
+v3[which(v3 %in% v1 & v3 %in% v2 )]
+r1<- rep(c(2,3), each=6)
+r1
+r2<-seq(from=1, to=3, by=1)
+r2
+r3<-r1+r2
+r3
+max(r3[which(r3%%2==0)])
